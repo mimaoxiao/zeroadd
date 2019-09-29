@@ -6,21 +6,16 @@
     grid-row-gap: 0px;
     height:100vmin;
 } 
-.div1 { 
+.title { 
     grid-area: 1 / 1 / 2 / 2;
     place-self: center center;
-    font-family: 'xiaowei';
-    font-size: 20vmin;
+
 }
-.div2 { 
+.menu { 
     grid-area: 2 / 1 / 3 / 2; 
     place-self: center center;
 }
-.div3 { 
+.interface { 
     grid-area: 1 / 2 / 3 / 3; 
     place-self: center center;
 }
-@font-face {
-    font-family: 'xiaowei';
-    src: url('../fonts/ZCOOLXiaoWei-Regular.ttf');
-  }

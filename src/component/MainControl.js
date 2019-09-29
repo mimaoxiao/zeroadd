@@ -1,4 +1,7 @@
 import styles from "./MainControl.css";
+import Interface from "./Interface/Interface";
+import Title from "./Title/Title";
+import MenuControl from "./MenuControl/MenuControl";
 import React from 'react';
 
 export default class MainControl extends React.Component{
@@ -12,9 +15,9 @@ export default class MainControl extends React.Component{
     render(){
         return (
             <div className={styles.parent}>
-            <div className={styles.div1}>零和</div>
-            <div className={styles.div2}>meow</div>
-            <div className={styles.div3}>meow</div>
+                <Title className={styles.title}/>
+                <MenuControl className={styles.menu}/>
+                <div className={styles.interface}>meow</div>
             </div>
         );
     }
