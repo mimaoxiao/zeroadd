@@ -1,4 +1,4 @@
-import styles from "./A1.css";
+import "./A1.css";
 import React from 'react';
 
 export default class A1 extends React.Component{
@@ -12,7 +12,9 @@ export default class A1 extends React.Component{
     render(){
         return (
             <>
-            <div onClick={this.props.change} next="A1B1">A1desu</div>
+            <div>
+                <div next="A1B1" className="MenuButton" onClick={this.props.change}>开始阅读</div>
+            </div>
             </>
         );
     }

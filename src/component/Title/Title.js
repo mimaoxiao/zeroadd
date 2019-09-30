@@ -1,4 +1,4 @@
-import styles from "./Title.css";
+import "./Title.css";
 import React from 'react';
 
 export default class Title extends React.Component{
@@ -11,9 +11,9 @@ export default class Title extends React.Component{
 
     render(){
         return (
-            <div className={styles.parent}>
-                <div className={styles.title}>零和</div>
-                <div className={styles.author}>陆琴言</div>
+            <div className="TitleParent">
+                <div className="TitleTitle">零和</div>
+                <div className="TitleAuthor">陆琴言</div>
             </div>
         );
     }

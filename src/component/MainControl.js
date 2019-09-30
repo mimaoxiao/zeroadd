@@ -1,4 +1,4 @@
-import styles from "./MainControl.css";
+import "./MainControl.css";
 import Interface from "./Interface/Interface";
 import Title from "./Title/Title";
 import MenuControl from "./MenuControl/MenuControl";
@@ -14,10 +14,10 @@ export default class MainControl extends React.Component{
 
     render(){
         return (
-            <div className={styles.parent}>
-                <Title className={styles.title}/>
-                <MenuControl className={styles.menu}/>
-                <div className={styles.interface}>meow</div>
+            <div className="MainControlParent">
+                <Title className="MainControlTitle"/>
+                <div className="MainControlMenu"><MenuControl/></div>
+                <div className="MainControlInterface">meow</div>
             </div>
         );
     }

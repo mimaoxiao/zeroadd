@@ -1,0 +1,42 @@
+.MenuButton:after{
+    left: 50%;
+    top: 95%;
+    width: 0;
+    height: 0.06em;
+    background: black;
+    transition: all 0.1s;
+    position: absolute;
+    content: "";
+    border-radius: 0.03em;
+}
+.MenuButton:hover::after{
+    width: 100%;
+    left: 0;
+}
+.MenuButton{
+    float: left;
+    clear:left;
+    position: relative;
+}
+.MenuPath{
+    font-size: 2vh;
+}
+.MenuBack::before{
+    position: absolute;
+    top: 1vh;
+    right: 100%;
+    font-size: 1em;
+    font-family: 'Material Icons';
+    content: "arrow_back";
+}
+.MenuFolder::before{
+    position: absolute;
+    top: 1vh;
+    right: 100%;
+    font-size: 1em;
+    font-family: 'Material Icons';
+    content: "folder";
+}
+.MenuFolder:hover::before{
+    content: "folder_open";
+}

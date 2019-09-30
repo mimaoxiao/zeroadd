@@ -1,4 +1,4 @@
-.parent {
+.MainControlParent {
     display: grid;
     grid-template-columns: 2fr 5fr;
     grid-template-rows: 1fr 3fr;
@@ -6,16 +6,15 @@
     grid-row-gap: 0px;
     height:100vmin;
 } 
-.title { 
+.MainControlTitle { 
     grid-area: 1 / 1 / 2 / 2;
     place-self: center center;
 
 }
-.menu { 
+.MainControlMenu { 
     grid-area: 2 / 1 / 3 / 2; 
-    place-self: center center;
 }
-.interface { 
+.MainControlInterface { 
     grid-area: 1 / 2 / 3 / 3; 
     place-self: center center;
 }

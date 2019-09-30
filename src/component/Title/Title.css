@@ -1,24 +1,20 @@
-.parent {
+.TitleParent {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 } 
-.title { 
+.TitleTitle { 
     grid-area: 1 / 1 / 2 / 3;
     font-family: 'xiaowei';
     font-size: 15vh;
     text-align:center;
  }
-.author { 
+.TitleAuthor { 
     grid-area: 2 / 2 / 3 / 3; 
     font-family: 'xiaowei';
     font-size: 2vh;
     justify-items: center;
     align-items: center;
-}
-@font-face {
-    font-family: 'xiaowei';
-    src: url('ZCOOLXiaoWei-Regular.ttf');
 }

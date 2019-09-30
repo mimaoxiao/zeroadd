@@ -1,4 +1,4 @@
-import styles from "./MenuControl.css";
+import "./MenuControl.css";
 import React from 'react';
 import A1 from "./A1/A1";
 import A1B1 from "./A1B1/A1B1";
@@ -23,10 +23,10 @@ export default class MenuControl extends React.Component{
 
     render(){
         return (
-        <div>
-            <MenuChoose if={this.state.display==="A1"}><A1 change={this.MenuChange}/></MenuChoose>
-            <MenuChoose if={this.state.display==="A1B1"}><A1B1 change={this.MenuChange}/></MenuChoose>
-        </div>
+            <div className="MenuControlMenu">      
+                <MenuChoose if={this.state.display==="A1"}><A1 change={this.MenuChange}/></MenuChoose>
+                <MenuChoose if={this.state.display==="A1B1"}><A1B1 change={this.MenuChange}/></MenuChoose>
+            </div>
         )
     }
 }
