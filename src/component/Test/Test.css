@@ -1,45 +1,118 @@
-/*入场动画开始*/
+.fadeD-enter {
+  opacity: 0;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.fadeD-appear {
+  opacity: 0;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.fadeD-leave {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.fadeD-enter.fadeD-enter-active {
+  animation-name: fadeDIn;
+  animation-play-state: running;
+}
+
+.fadeD-appear.fadeD-appear-active {
+  animation-name: fadeDIn;
+  animation-play-state: running;
+}
+
+.fadeD-leave.fadeD-leave-active {
+  animation-name: fadeDOut;
+  animation-play-state: running;
+}
+
+@keyframes fadeDIn {
+  0% {
+    opacity: 0;
+    right:200px;
+  }
+  100% {
+    opacity: 1;
+    right:0px;
+  }
+}
+
+@keyframes fadeDOut {
+  0% {
+    opacity: 1;
+    left:0px;
+  }
+  100% {
+    opacity: 0;
+    left:200px;
+  }
+}
 .fade-enter {
+  opacity: 0;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.fade-appear {
+  opacity: 0;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.fade-leave {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.fade-enter.fade-enter-active {
+  animation-name: fadeIn;
+  animation-play-state: running;
+}
+
+.fade-appear.fade-appear-active {
+  animation-name: fadeIn;
+  animation-play-state: running;
+}
+
+.fade-leave.fade-leave-active {
+  animation-name: fadeOut;
+  animation-play-state: running;
+}
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
+    right:200px;
   }
-   
-  /*入场动画过程*/
-  .fade-enter-active {
+  100% {
     opacity: 1;
-    -moz-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
+    right:0px;
   }
-   
-  /*入场动画结束*/
-  .fade-enter-done {
+}
+
+@keyframes fadeOut {
+  0% {
     opacity: 1;
+    left:0px;
   }
-   
-  /*离场动画开始*/
-  .fade-exit {
-    opacity: 1;
-  }
-   
-  /*离场动画过程*/
-  .fade-exit-active {
+  100% {
     opacity: 0;
-    -moz-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
+    left:200px;
   }
-   
-  /*离场动画结束*/
-  .fade-exit-done {
-    opacity: 0;
-  }
-   
-  /*页面第一次加载时的开始状态*/
-  .fade-appear {
-    opacity: 0;
-  }
-   
-  /*页面第一次加载时的动画过程*/
-  .fade-appear-active {
-    opacity: 1;
-    -moz-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
-  }
+}

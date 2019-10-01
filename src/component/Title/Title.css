@@ -7,13 +7,11 @@
 } 
 .TitleTitle { 
     grid-area: 1 / 1 / 2 / 3;
-    font-family: 'xiaowei';
     font-size: 15vh;
     text-align:center;
  }
 .TitleAuthor { 
-    grid-area: 2 / 2 / 3 / 3; 
-    font-family: 'xiaowei';
+    grid-area: 2 / 2 / 3 / 3;  
     font-size: 2vh;
     justify-items: center;
     align-items: center;

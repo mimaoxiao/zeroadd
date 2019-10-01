@@ -1,40 +1,61 @@
-import React, { Component, Fragment } from 'react'
-import { CSSTransition } from 'react-transition-group'
-import './Test.css'
- 
-class App extends Component {
- 
-	constructor(props) {
-		super(props)
-		this.state = {
-			show: true
-		}
-		this.handleToggole = this.handleToggole.bind(this)
-	}
- 
-	render() {
-		return (
-			<Fragment>
-				<CSSTransition
-					in={ this.state.show }
-					timeout={ 1000 }
-					classNames='fade'
-					unmountOnExit
-					onEntered={el => {el.style.color = 'blue'}}
-					appear={true}
-				>
-					<div>hello</div>
-				</CSSTransition>
-				<button onClick={this.handleToggole}>toggole</button>
-			</Fragment>
-		)
-	}
- 
-	handleToggole() {
-		this.setState({
-			show: this.state.show ? false : true
-		})
-	}
+import React from 'react';
+import './Test.css';
+import Animate from 'rc-animate';
+
+function sleep(delay) {
+    var start = (new Date()).getTime();
+    while ((new Date()).getTime() - start < delay) {
+      continue;
+    }
+  }
+
+export default class Test extends React.Component{
+  constructor() {
+    super(...arguments);
+    this.state = {
+      show: true,
+      showD:false
+    };
+    [
+      'onClick','onDlick'
+    ].forEach((method) => this[method] = this[method].bind(this));
+  }
+  
+  onClick(){
+    this.setState({
+      show: !this.state.show,
+    });
+  }
+  onDlick(){
+    this.setState({
+      showD: !this.state.showD,
+    });
+  }
+  
+  render(){
+    return (
+      <div className="code-box-demo-wrapper">
+        <p className="buttons">
+          <button type="primary" onClick={this.onClick}>Switch</button>
+        </p>
+        <Animate
+          component=""
+          transitionName="fade"
+          onEnd={this.onDlick}
+        >
+          {
+            this.state.show ? 
+              <div key="1" className="code-box-shape" >S</div> : null}
+        </Animate>
+        <Animate
+          component=""
+          transitionName="fadeD"       
+        >
+              {
+            this.state.showD ? 
+              <div key="2" className="code-box-shape" >D</div> : null}
+        </Animate>
+      </div>
+    );
+  }
 }
- 
-export default App
