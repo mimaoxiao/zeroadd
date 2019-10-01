@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "rc-animate": "^2.10.0",
     "rc-queue-anim": "^1.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
