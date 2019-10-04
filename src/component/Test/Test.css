@@ -1,118 +1,20 @@
-.fadeD-enter {
-  opacity: 0;
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-play-state: paused;
+.doge{
+  perspective: 800px;
+  position: absolute;
+  top:50%;
+  left: 50%;
 }
 
-.fadeD-appear {
-  opacity: 0;
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-play-state: paused;
+.meow{
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 64px;
+  height: 36px;
 }
 
-.fadeD-leave {
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-}
-
-.fadeD-enter.fadeD-enter-active {
-  animation-name: fadeDIn;
-  animation-play-state: running;
-}
-
-.fadeD-appear.fadeD-appear-active {
-  animation-name: fadeDIn;
-  animation-play-state: running;
-}
-
-.fadeD-leave.fadeD-leave-active {
-  animation-name: fadeDOut;
-  animation-play-state: running;
-}
-
-@keyframes fadeDIn {
-  0% {
-    opacity: 0;
-    right:200px;
-  }
-  100% {
-    opacity: 1;
-    right:0px;
-  }
-}
-
-@keyframes fadeDOut {
-  0% {
-    opacity: 1;
-    left:0px;
-  }
-  100% {
-    opacity: 0;
-    left:200px;
-  }
-}
-.fade-enter {
-  opacity: 0;
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-}
-
-.fade-appear {
-  opacity: 0;
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-}
-
-.fade-leave {
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-}
-
-.fade-enter.fade-enter-active {
-  animation-name: fadeIn;
-  animation-play-state: running;
-}
-
-.fade-appear.fade-appear-active {
-  animation-name: fadeIn;
-  animation-play-state: running;
-}
-
-.fade-leave.fade-leave-active {
-  animation-name: fadeOut;
-  animation-play-state: running;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    right:200px;
-  }
-  100% {
-    opacity: 1;
-    right:0px;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    left:0px;
-  }
-  100% {
-    opacity: 0;
-    left:200px;
-  }
+.peach{
+  position: absolute;
+  width: 20vmin;
+  height: 15vmin;
+  background-color: aqua;
 }

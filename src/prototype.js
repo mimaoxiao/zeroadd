@@ -1,4 +1,4 @@
-import styles from "./.css";
+import "./.css";
 import React from 'react';
 
 export default class X extends React.Component{
@@ -7,6 +7,9 @@ export default class X extends React.Component{
         this.state=({
 
         });
+        [
+            
+        ].forEach((method) => this[method] = this[method].bind(this));
     }
 
     render(){

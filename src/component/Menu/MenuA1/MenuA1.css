@@ -1,0 +1,20 @@
+.MenuButton:after{
+    left: 50%;
+    top: 95%;
+    width: 0;
+    height: 0.06em;
+    background: black;
+    transition: all 0.1s;
+    position: absolute;
+    content: "";
+    border-radius: 0.03em;
+}
+.MenuButton:hover::after{
+    width: 100%;
+    left: 0;
+}
+.MenuButton{
+    float: left;
+    clear:left;
+    position: relative;
+}

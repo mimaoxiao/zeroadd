@@ -1,0 +1,13 @@
+.InterfaceHead{
+    border:4px solid black;
+    border-radius:10px;
+    font-size: 10vmin;
+    height: 1em;
+    align-self: center;
+}
+.InterfaceHeadIcon{
+    width: 1em;
+    height: 1em;
+    background-image: url('search.png');
+    background-size: 100% 100%;
+}

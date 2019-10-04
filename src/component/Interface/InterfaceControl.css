@@ -1,0 +1,15 @@
+.InterfaceParent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+}
+.InterfaceHead{
+    grid-area: 1 / 2 / 2 / 11;
+}
+.InterfaceBody{
+    grid-area: 2 / 2 / 9 / 11;
+}

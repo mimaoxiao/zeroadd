@@ -1,0 +1,6 @@
+.InterfaceA1Main{
+    height: 68vmin;
+    width: 50vmin;
+    background-size:100% 100%;  
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
