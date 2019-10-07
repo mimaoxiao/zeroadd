@@ -1,8 +1,8 @@
 import "./InterfaceA1B1.css";
 import React from 'react';
-import QueueAnim from 'rc-queue-anim';
+import TweenOne from 'rc-tween-one';
 
-export default class InterfaceA1B1 extends React.Component{
+export default class InterfaceLoading extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -11,29 +11,204 @@ export default class InterfaceA1B1 extends React.Component{
     }
 
     render(){
-        let x=[];
-        let Add=this.props.Add;
-        for(let i=0;i<Add;i++)
-        {
-            switch(Add[i])
-            {
-                case"C1":x.push(<div key="A1B1C1" className="InterfaceA1B1Cell">meow</div>);break;
-                default:break;
-            }
-        }
         return (
-            <div className="InterfaceA1B1">
-                <div className="InterfaceA1B1Icon"></div>
-                <QueueAnim className="InterfaceA1B1Animate"
-                duration="300"
-                appear={false}
-                animConfig={[
-                { opacity: [1, 0], translateX: [0, 15] },
-                { opacity: [1, 0], translateX: [0, -15] }
+            <div className="InterfaceLoading">
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:0,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1700
+                },]}
+                repeat={-1}
+                
+                className="InterfaceLoadingL"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                L
+                </TweenOne>
+                </div>
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:200,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1500
+                },
                 ]}
-                onEnd={this.MenuChangeEnd}>
-                {x}
-                </QueueAnim>
+                repeat={-1}
+                className="InterfaceLoadingo"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                o
+                </TweenOne>
+                </div>
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:400,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1300
+                },]}
+                repeat={-1}
+                
+                className="InterfaceLoadinga"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                a
+                </TweenOne>
+                </div>
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:600,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1100
+                },]}
+                repeat={-1}
+                
+                className="InterfaceLoadingd"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                d
+                </TweenOne>
+                </div>
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:800,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:900
+                },]}
+                repeat={-1}
+                
+                className="InterfaceLoadingi"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                i
+                </TweenOne>
+                </div>
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:1000,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:700
+                },]}
+                repeat={-1}
+                
+                className="InterfaceLoadingn"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                n
+                </TweenOne>
+                </div>
+                <div className="InterfaceLoadingWord">
+                <TweenOne
+                animation={[{ 
+                    delay:1200,
+                    rotateY:0,
+                    opacity:1,
+                    duration: 2000,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:1000
+                },
+                {
+                    opacity:0,
+                    duration: 500,
+                    ease:"easeInSine",
+                },
+                {
+                    duration:500
+                },]}
+                repeat={-1}
+                
+                className="InterfaceLoadingg"
+                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
+                >
+                g
+                </TweenOne>
+                </div>
             </div>
         );
     }

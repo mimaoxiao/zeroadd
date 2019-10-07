@@ -15,7 +15,7 @@ export default class MenuA1B1 extends React.Component{
             <div>
                 <div className="MenuPath">章节选择</div>
                 <div Next="A1" className="MenuButton MenuBack" onClick={this.props.Change}>返回</div>
-                <div Next="A1B1C1" className="MenuButton MenuFolder" onClick={this.props.Change}>正文</div>
+                <div Next="A1+B1+C1" className="MenuButton MenuFolder" onClick={this.props.Change}>正文</div>
             </div>
         );
     }

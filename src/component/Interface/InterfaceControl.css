@@ -1,15 +1,24 @@
 .InterfaceParent{
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 98%;
+    border:4px solid black;
+    border-radius:10px;
+    background-color: grey;
+    font-family: "HuangYou";
+
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr 28fr 1fr;
+    grid-template-rows: 1fr 4fr 20fr 1fr; 
     grid-column-gap: 0px;
     grid-row-gap: 0px; 
+
+
 }
 .InterfaceHead{
-    grid-area: 1 / 2 / 2 / 11;
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: aliceblue;
 }
 .InterfaceBody{
-    grid-area: 2 / 2 / 9 / 11;
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: aliceblue;
 }

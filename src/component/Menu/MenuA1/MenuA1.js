@@ -12,7 +12,7 @@ export default class MenuA1 extends React.Component{
     render(){
         return (
             <div>
-                <div Next="A1B1" className="MenuButton" onClick={this.props.Change}>开始阅读</div>
+                <div Next="A1+B1" className="MenuButton" onClick={this.props.Change}>开始阅读</div>
             </div>
         );
     }

@@ -9,6 +9,10 @@ body {
   src: url('LongCang-Regular.ttf');
 }
 @font-face {
+  font-family: 'HuangYou';
+  src: url('HuangYou-Regular.ttf');
+}
+@font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;

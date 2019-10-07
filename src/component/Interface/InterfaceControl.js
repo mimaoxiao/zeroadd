@@ -12,10 +12,13 @@ export default class InterfaceControl extends React.Component{
     }
 
     render(){
+        let Now=this.props.Now;
+        let StringList=Now.split('+');
+        console.log(StringList);
         return (
             <div className="InterfaceParent">
-                <InterfaceHead className="InterfaceHead" Now={this.props.Now}/>
-                <InterfaceBody className="InterfaceBody" Now={this.props.Now}/>
+                <InterfaceHead className="InterfaceHead" Now={StringList}/>
+                <InterfaceBody className="InterfaceBody"/>
             </div>
         );
     }

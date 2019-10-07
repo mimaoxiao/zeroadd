@@ -10,7 +10,8 @@ export default class MenuControl extends React.Component{
     constructor(props){
         super(props);
         this.state=({
-
+            Display:this.props.Now,
+            Loading:"",
         });
         [
             'MenuChangeFirst','MenuChangeEnd'
@@ -18,19 +19,30 @@ export default class MenuControl extends React.Component{
     }
 
     MenuChangeFirst(event){
-        this.props.Change(event.target.attributes[0].value);
+        this.setState({
+            Display:"",
+            Loading:event.target.attributes[0].value
+        })
     }
     MenuChangeEnd(event){
-        this.props.Change();
+        if(this.state.Loading!=="")
+        {
+            let loading=this.state.Loading;
+            this.setState({
+                Display:loading,
+                Loading:"",
+            })
+            this.props.Change(loading);
+        }
     }
 
     render(){
         let x;
-        switch(this.props.Now)
+        switch(this.state.Display)
         {
             case "A1":x=<MenuA1 key="A1" Change={this.MenuChangeFirst}/>;break;
-            case "A1B1":x=<MenuA1B1 key="A1B1" Change={this.MenuChangeFirst}/>;break;
-            case "A1B1C1":x=<MenuA1B1C1 key="A1B1C1" Change={this.MenuChangeFirst}/>;break;
+            case "A1+B1":x=<MenuA1B1 key="A1B1" Change={this.MenuChangeFirst}/>;break;
+            case "A1+B1+C1":x=<MenuA1B1C1 key="A1B1C1" Change={this.MenuChangeFirst}/>;break;
             case "":break;
             default:break;
         }

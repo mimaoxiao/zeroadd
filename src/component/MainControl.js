@@ -9,7 +9,6 @@ export default class MainControl extends React.Component{
         super(props);
         this.state=({
             Display:"A1",
-            Loading:"",
         });
 
         [
@@ -18,23 +17,7 @@ export default class MainControl extends React.Component{
     }
 
     StatusChange(next){
-        if(this.state.Loading===""){
-            if(next===undefined)//第三次切换多余 将其无效
-            {
-                return;
-            }
-            this.setState({//第一次切换撤下原有元素
-                Display:"",
-                Loading:next,
-            });
-        }
-        else{
-            let loading=this.state.Loading;//第二次切换换上新元素
-            this.setState({
-                Display:loading,
-                Loading:"",
-            });
-        }
+        this.setState({Display:next});
     }
 
     render(){

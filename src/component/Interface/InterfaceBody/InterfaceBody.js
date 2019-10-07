@@ -21,7 +21,7 @@ export default class InterfaceBody extends React.Component{
         switch(this.props.Now)
         {
             case "A1":x=<InterfaceA1 key="A1"/>;break;
-            case "":break;
+            case "A1+B1":x=<InterfaceA1B1 key="A1B1"/>;break;
             default:break;
         }
         return (
