@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# rubish
+/rubish
+
 # production
 /build
 /dist

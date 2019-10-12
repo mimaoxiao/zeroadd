@@ -1,7 +1,7 @@
 import "./MainControl.css";
-import InterfaceControl from "./Interface/InterfaceControl";
-import Title from "./Title/Title";
-import MenuControl from "./Menu/MenuControl";
+import MainA1 from './MainA1/MainA1';
+ 
+import QueueAnim from 'rc-queue-anim';
 import React from 'react';
 
 export default class MainControl extends React.Component{
@@ -21,11 +21,16 @@ export default class MainControl extends React.Component{
     }
 
     render(){
+        let content;
+        switch(this.state.Display){
+            case "A1":{
+                content=<MainA1/>;break;
+            }
+            default:break;
+        }
         return (
-            <div className="MainControlParent">
-                <div className="MainControlTitle"><Title/></div>
-                <div className="MainControlMenu"><MenuControl Change={this.StatusChange} Now={this.state.Display}/></div>
-                <div className="MainControlInterface"><InterfaceControl Now={this.state.Display}/></div>
+            <div class="MainControl">
+                {content}
             </div>
         );
     }

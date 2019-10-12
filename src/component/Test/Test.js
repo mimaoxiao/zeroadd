@@ -1,223 +1,65 @@
 import React from 'react';
 import './Test.css';
-import TweenOne from 'rc-tween-one';
+import QueueAnim from 'rc-queue-anim';
 
 export default class Test extends React.Component{
     constructor(props){
         super(props);
-        this.state=({
-
+        this.state = {
+            show: true,
+            items: [
+              <li key="0">0</li>,
+              <li key="1">1</li>,
+              <li key="2">2</li>
+            ],
+            change:['right', 'left']
+          };
+          ['onAdd','onRemove','onSwitch'].forEach((method)=>this[method] = this[method].bind(this));
+    }
+      onAdd() {
+        let items = this.state.items;
+        items.push(<li key={Date.now()}>{this.state.items.length}</li>);
+        this.setState({
+          show: true,
+          items:items,
         });
-        [].forEach((method)=>this[method] = this[method].bind(this));
-    }
-
-    render(){
+      }
+      onRemove(){
+        let items = this.state.items;
+        items.splice(items.length - 1, 1);
+        this.setState({
+          show: true,
+          items:items,
+        });
+      }
+      onSwitch(){
+          if(this.state.change===['left', 'right']){
+                this.setState({
+                change:['right', 'left']
+              });
+          }
+          else{
+            this.setState({
+                change:['left', 'right']
+              });
+          }
+      }
+      render(){
         return (
-            <div className="InterfaceLoading">
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={1200}
-                animation={[{ 
-                    delay:0,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1700
-                },]}
-                repeat={-1}
-                
-                className="InterfaceLoadingL"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                L
-                </TweenOne>
-                </div>
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={1000}
-                animation={[{ 
-                    delay:200,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1500
-                },
-                ]}
-                repeat={-1}
-                className="InterfaceLoadingo"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                o
-                </TweenOne>
-                </div>
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={800}
-                animation={[{ 
-                    delay:400,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1300
-                },]}
-                repeat={-1}
-                
-                className="InterfaceLoadinga"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                a
-                </TweenOne>
-                </div>
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={600}
-                animation={[{ 
-                    delay:600,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1100
-                },]}
-                repeat={-1}
-                
-                className="InterfaceLoadingd"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                d
-                </TweenOne>
-                </div>
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={400}
-                animation={[{ 
-                    delay:800,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:900
-                },]}
-                repeat={-1}
-                
-                className="InterfaceLoadingi"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                i
-                </TweenOne>
-                </div>
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={200}
-                animation={[{ 
-                    delay:1000,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:700
-                },]}
-                repeat={-1}
-                
-                className="InterfaceLoadingn"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                n
-                </TweenOne>
-                </div>
-                <div className="InterfaceLoadingWord">
-                <TweenOne
-                reverseDelay={0}
-                animation={[{ 
-                    delay:1200,
-                    rotateY:0,
-                    opacity:1,
-                    duration: 2000,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:1000
-                },
-                {
-                    opacity:0,
-                    duration: 500,
-                    ease:"easeInSine",
-                },
-                {
-                    duration:500
-                },]}
-                repeat={-1}
-                
-                className="InterfaceLoadingg"
-                style={{opacity:'0',transform: 'rotateY(-90deg)'}}
-                >
-                g
-                </TweenOne>
-                </div>
+          <div className="queue-demo">
+            <p className="buttons">
+            <button onClick={this.onSwitch} style={{ marginLeft: 10 }}>S</button>
+              <button onClick={this.onAdd} style={{ marginLeft: 10 }}>Add</button>
+              <button onClick={this.onRemove} style={{ marginLeft: 10 }}>Remove</button>
+            </p>
+            <div className="demo-content">
+              <div className="demo-tbody" key="b">
+                <QueueAnim component="ul" type={this.state.change} leaveReverse>
+                  {this.state.show ? this.state.items : null}
+                </QueueAnim>
+              </div>
             </div>
+          </div>
         );
-    }
+      }
 }
