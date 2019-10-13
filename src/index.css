@@ -4,6 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'LongCang';
 }
+html { overflow-x: hidden; overflow-y: hidden; }
 @font-face {
   font-family: 'LongCang';
   src: url('LongCang-Regular.ttf');

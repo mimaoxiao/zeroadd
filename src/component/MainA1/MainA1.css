@@ -4,7 +4,7 @@
     grid-template-rows: 1fr 3fr;
     grid-column-gap: 50px;
     grid-row-gap: 0px;
-    height:100vmin;
+    height: 100vmin;
 } 
 .MainA1Title { 
     grid-area: 1 / 1 / 2 / 2;
@@ -12,6 +12,8 @@
 }
 .MainA1Tip { 
     grid-area: 2 / 1 / 3 / 2; 
+    font-size: 4vmin;
+    letter-spacing: 2px;
     place-self: center center;
 }
 .MainA1Photo { 

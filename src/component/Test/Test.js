@@ -54,7 +54,7 @@ export default class Test extends React.Component{
             </p>
             <div className="demo-content">
               <div className="demo-tbody" key="b">
-                <QueueAnim component="ul" type={this.state.change} leaveReverse>
+                <QueueAnim component="ul" type={this.state.change} interval={1000} leaveReverse>
                   {this.state.show ? this.state.items : null}
                 </QueueAnim>
               </div>
