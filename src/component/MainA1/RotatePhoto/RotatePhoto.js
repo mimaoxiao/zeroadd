@@ -6,25 +6,18 @@ export default class RotatePhoto extends React.Component{
     constructor(props){
         super(props);
         this.state=({
-            now:1,
-            switchtime:true
+            now:1
         });
         ['ChangePicture'].forEach((method)=>this[method] = this[method].bind(this));
     }
 
     ChangePicture(){
-        if(this.state.switchtime)
+        let now=this.state.now+1;
+        if(now===5)
         {
-            let now=this.state.now+1;
-            if(now===5)
-            {
-                now=1;
-            }
-            this.setState({now:now,switchtime:false});
+            now=1;
         }
-        else{
-            this.setState({switchtime:true});
-        }
+        this.setState({now:now});
     }
 
     render(){
@@ -34,13 +27,13 @@ export default class RotatePhoto extends React.Component{
         return (
             <TweenOne
             animation={{ 
-                rotateY: 90,
+                rotateY: -90,
                 yoyo:true,
                 repeat: -1, // demo 演示需要
-                duration: 2000,
+                duration: 4000,
                 onRepeat:ChangeMethod
             }}
-            style={{height:'80vmin',width:'60vmin',alignSelf:'center',justifySelf:'center'}}
+            style={{transform:'rotateY(90deg)',height:'80vmin',width:'60vmin',alignSelf:'center',justifySelf:'center'}}
             >
             <div className="InterfaceA1Main" style={PicPath}/>
             </TweenOne>

@@ -1,21 +1,25 @@
 .MainB1Parent {
     display: grid;
-    grid-template-columns: 1fr 4fr repeat(2, 5fr);
-    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 1fr 14fr;
+    grid-template-rows: 2fr 2fr repeat(4, 3fr); 
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 20px;
     height: 100vmin;
 }
 .MainB1Back {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 2; 
     padding: 5px;
 }
-.MainB1Story { 
-    grid-area: 2 / 1 / 3 / 3;
+.MainB1Title{
+    grid-area: 2 / 2 / 3 / 3;
 }
-.MainB1Person {
-    grid-area: 2 / 3 / 3 / 4; 
+.MainB1Story { 
+    grid-area: 3 / 2 / 4 / 3;
 }
 .MainB1Event { 
-    grid-area: 2 / 4 / 3 / 5; 
+    grid-area: 4 / 2 / 5 / 3;
 } 
+.MainB1Person {
+    grid-area: 5 / 2 / 6 / 3;
+}
+    

@@ -1,13 +1,9 @@
 .Return{
-    border: 2px solid black;
-    border-radius: 3px;
     height: 100%;
     width: 100%;
-    font-size: 12vh;
-    text-align: center;
     background-image: url('arrow.png');
     background-size: 100% 100%;
-}
-.Return:hover{
-    background-color: aquamarine;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #ffffff;
 }

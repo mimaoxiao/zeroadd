@@ -1,8 +1,8 @@
-import "./Return.css";
+import "./MainB1Event.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class Return extends React.Component{
+export default class MainB1Event extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -10,7 +10,7 @@ export default class Return extends React.Component{
             reverse:false,
         });
         [
-            'onClick','MouseEnter','MouseLeave','MouseEnd'
+            'MouseEnter','MouseLeave','MouseEnd'
         ].forEach((method) => this[method] = this[method].bind(this));
     }
     MouseEnter(){
@@ -22,10 +22,6 @@ export default class Return extends React.Component{
     MouseEnd(){
         this.setState({paused:true});
     }
-    onClick(){
-        this.props.Change(this.props.Next,this.props.Level);
-    }
-
     render(){
         return (
             <TweenOne
@@ -35,13 +31,27 @@ export default class Return extends React.Component{
                 duration: 200,
                 onComplete:this.MouseEnd
             }}
-            className="Return"
+            className="MainB1Event"
             paused={this.state.paused}
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
             onMouseLeave={this.MouseLeave}
             onClick={this.onClick}
-            />
+            >
+                <TweenOne
+                animation={
+                { 
+                    rotate:720,
+                    duration:2000,
+                    ease:"easeInOutQuart",
+                    repeat:-1
+                }}
+                className="MainB1EventIcon"
+                >
+                <img src="music.png" alt=""/>
+                </TweenOne>
+                <div className="MainB1EventContent">阅览主线剧情</div>
+            </TweenOne>
         );
     }
 }
