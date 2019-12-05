@@ -1,8 +1,8 @@
-import "./RotatePhoto.css";
+import "./A1RotatePhoto.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class RotatePhoto extends React.Component{
+export default class A1RotatePhoto extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -35,7 +35,7 @@ export default class RotatePhoto extends React.Component{
             }}
             style={{transform:'rotateY(90deg)',height:'80vmin',width:'60vmin',alignSelf:'center',justifySelf:'center'}}
             >
-            <div className="InterfaceA1Main" style={PicPath}/>
+            <div className="A1RotatePhoto" style={PicPath}/>
             </TweenOne>
         );
     }

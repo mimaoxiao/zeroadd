@@ -1,8 +1,8 @@
-import "./MainB1Event.css";
+import "./B1Event.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class MainB1Event extends React.Component{
+export default class B1Event extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -31,7 +31,7 @@ export default class MainB1Event extends React.Component{
                 duration: 200,
                 onComplete:this.MouseEnd
             }}
-            className="MainB1Event"
+            className="B1Event"
             paused={this.state.paused}
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
@@ -46,11 +46,11 @@ export default class MainB1Event extends React.Component{
                     ease:"easeInOutQuart",
                     repeat:-1
                 }}
-                className="MainB1EventIcon"
+                className="B1EventIcon"
                 >
-                <img src="music.png" alt=""/>
+                <img src="B1Music.png" alt=""/>
                 </TweenOne>
-                <div className="MainB1EventContent">阅览主线剧情</div>
+                <div className="B1EventContent">阅览主线剧情</div>
             </TweenOne>
         );
     }

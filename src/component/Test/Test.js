@@ -1,43 +1,41 @@
 import React from 'react';
 import './Test.css';
-import TweenOne from 'rc-tween-one';
+import Animate from 'rc-animate';
 
 export default class Test extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-          paused:true,
-          reverse:false,
+          show:true
           };
           [
-            'enter','leave','end'
+            'start','stop'
         ].forEach((method) => this[method] = this[method].bind(this));
     }
-    enter(){
-      this.setState({paused:false,reverse:false});
+    start(){
+      this.setState({show:!this.state.show});
     }
-    leave(){
-      this.setState({paused:false,reverse:true});
-    }
-    end(){
-      this.setState({paused:true});
+    stop(){
+
     }
       render(){
-        let complete=this.end;
+        
         return (
-    <TweenOne
-      animation={
-      { 
-        backgroundColor: '#e8e8e8',
-        duration: 200,
-        onComplete:complete
-      }}
-      className="test"
-      paused={this.state.paused}
-      reverse={this.state.reverse}
-      onMouseEnter={this.enter}
-      onMouseLeave={this.leave}
-    >喵喵喵</TweenOne>
+          <div style={{margin:"100px"}}>
+          <div onClick={this.start}>enter</div>
+          <Animate
+          transitionName="fade"
+          className="up"
+        >
+          {this.state.show?<div className="meow">meow</div>:null}
+        </Animate>
+        <Animate
+        className="down"
+          transitionName="fade"
+        >
+          {!this.state.show?<div className="meow">meow</div>:null}
+        </Animate>
+          </div>
         );
       }
 }

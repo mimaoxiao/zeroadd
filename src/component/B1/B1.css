@@ -1,4 +1,4 @@
-.MainB1Parent {
+.B1Parent {
     display: grid;
     grid-template-columns: 1fr 14fr;
     grid-template-rows: 2fr 2fr repeat(4, 3fr); 
@@ -6,20 +6,20 @@
     grid-row-gap: 20px;
     height: 100vmin;
 }
-.MainB1Back {
+.B1Back {
     grid-area: 1 / 1 / 2 / 2; 
     padding: 5px;
 }
-.MainB1Title{
+.B1Title{
     grid-area: 2 / 2 / 3 / 3;
 }
-.MainB1Story { 
+.B1Story { 
     grid-area: 3 / 2 / 4 / 3;
 }
-.MainB1Event { 
+.B1Event { 
     grid-area: 4 / 2 / 5 / 3;
 } 
-.MainB1Person {
+.B1Person {
     grid-area: 5 / 2 / 6 / 3;
 }
     

@@ -1,4 +1,4 @@
-.MainB1Event{
+.B1Event{
     border: 3px solid black;
     border-radius: 10px;
     margin-left: 25%;
@@ -8,16 +8,16 @@
     align-items: center;
     background-color: #ffffff;
 }
-.MainB1EventIcon{
+.B1EventIcon{
     height: 3em;
     width: 3em;
     margin-right: 2em;
 }
-.MainB1EventIcon>img{
+.B1EventIcon>img{
     width: 100%;
     height: 100%;
 }
-.MainB1EventContent{
+.B1EventContent{
     font-size: 3em;
     letter-spacing: 5px;
 }

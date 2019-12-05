@@ -1,4 +1,4 @@
-.TitleParent {
+.A1TitleParent {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr 1fr;
@@ -6,12 +6,12 @@
     grid-row-gap: 0px;
     font-family: 'LongCang';
 } 
-.TitleTitle { 
+.A1TitleTitle { 
     grid-area: 1 / 1 / 2 / 3;
     font-size: 18vh;
     text-align:center;
  }
-.TitleAuthor { 
+.A1TitleAuthor { 
     grid-area: 2 / 2 / 3 / 3;  
     font-size: 3vh;
     justify-items: center;

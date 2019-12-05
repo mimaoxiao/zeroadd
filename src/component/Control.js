@@ -1,11 +1,11 @@
-import "./MainControl.css";
-import MainA1 from './MainA1/MainA1';
-import MainB1 from './MainB1/MainB1';
+import "./Control.css";
+import A1 from './A1/A1';
+import B1 from './B1/B1';
  
 import QueueAnim from 'rc-queue-anim';
 import React from 'react';
 
-export default class MainControl extends React.Component{
+export default class Control extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -52,10 +52,10 @@ export default class MainControl extends React.Component{
         let content;
         switch(this.state.Display){
             case "A1":{
-                content=<MainA1 key="A1" Change={this.StatusChange}/>;break;
+                content=<A1 key="A1" Change={this.StatusChange}/>;break;
             }
             case "B1":{
-                content=<MainB1 key="B1" Change={this.StatusChange}/>;break;
+                content=<B1 key="B1" Change={this.StatusChange}/>;break;
             }
             default:break;
         }
@@ -65,7 +65,7 @@ export default class MainControl extends React.Component{
                 onEnd={this.StatusChange}
                 appear={false}
                 ease="easeInSine"
-                className="MainControl"
+                className="Control"
                 type={this.state.Change} 
                 >
                 {content}

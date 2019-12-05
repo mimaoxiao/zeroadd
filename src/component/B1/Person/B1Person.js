@@ -1,8 +1,8 @@
-import "./MainB1Story.css";
+import "./B1Person.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class MainB1Story extends React.Component{
+export default class B1Person extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -22,7 +22,6 @@ export default class MainB1Story extends React.Component{
     MouseEnd(){
         this.setState({paused:true});
     }
-
     render(){
         return (
             <TweenOne
@@ -32,7 +31,7 @@ export default class MainB1Story extends React.Component{
                 duration: 200,
                 onComplete:this.MouseEnd
             }}
-            className="MainB1Story"
+            className="B1Person"
             paused={this.state.paused}
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
@@ -40,19 +39,30 @@ export default class MainB1Story extends React.Component{
             onClick={this.onClick}
             >
                 <TweenOne
-                animation={
+                animation={[
                 { 
-                    opacity:0,
-                    yoyo:1,
-                    duration:2000,
+                    opacity:1,
+                    x:20,
+                    duration:250,
                     ease:"easeInSine",
-                    repeat:-1
-                }}
-                className="MainB1StoryIcon"
+                },{
+                    duration:1000
+                },{
+                    opacity:0,
+                    x:40,
+                    duration:250,
+                    ease:"easeInSine",
+                },{
+                    duration:250
+                }
+                ]}
+                className="B1PersonIcon"
+                repeat={-1}
+                style={{opacity:0}}
                 >
-                <img src="book.png" alt=""/>
+                <img src="B1Person.png" alt=""/>
                 </TweenOne>
-                <div className="MainB1StoryContent">阅览主线剧情</div>
+                <div className="B1PersonContent">阅览相关背景资料</div>
             </TweenOne>
         );
     }

@@ -1,11 +1,11 @@
-import "./MainA1.css";
-import RotatePhoto from './RotatePhoto/RotatePhoto';
-import Title from './Title/Title';
+import "./A1.css";
+import A1RotatePhoto from './RotatePhoto/A1RotatePhoto';
+import Title from './Title/A1Title';
 
 import TweenOne from 'rc-tween-one';
 import React from 'react';
 
-export default class MainA1 extends React.Component{
+export default class A1 extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -22,8 +22,8 @@ export default class MainA1 extends React.Component{
 
     render(){
         return (
-            <div next="B1" onClick={this.onClick} className="MainA1Parent">
-                <div className="MainA1Title"><Title/></div>
+            <div next="B1" onClick={this.onClick} className="A1Parent">
+                <div className="A1Title"><Title/></div>
                 <TweenOne
                 animation={{ 
                     opacity:1,
@@ -33,11 +33,11 @@ export default class MainA1 extends React.Component{
                     ease:"easeInSine"
                 }}
                 style={{opacity:0}}
-                className="MainA1Tip"
+                className="A1Tip"
                 >
                 点击屏幕继续
                 </TweenOne>
-                <div className="MainA1Photo"><RotatePhoto/></div>
+                <div className="A1Photo"><A1RotatePhoto/></div>
             </div>
         );
     }
