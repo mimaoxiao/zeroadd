@@ -1,9 +1,9 @@
-.Return{
-    height: 100%;
+.C1Prev{
     width: 100%;
-    background-image: url('ReturnArrow.png');
+    margin-top: 25%;
+    margin-bottom: 25%;
+    background-image: url('C1Prev.svg');
     background-size: 100% 100%;
-    border: 3px solid black;
     border-radius: 10px;
     background-color: #ffffff;
 }

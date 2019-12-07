@@ -1,8 +1,8 @@
-import "./B1Story.css";
+import "./C1Next.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class B1Story extends React.Component{
+export default class C1Right extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -10,7 +10,7 @@ export default class B1Story extends React.Component{
             reverse:false,
         });
         [
-            'MouseEnter','MouseLeave','MouseEnd','onClick'
+            'MouseEnter','MouseLeave','MouseEnd'
         ].forEach((method) => this[method] = this[method].bind(this));
     }
     MouseEnter(){
@@ -22,41 +22,21 @@ export default class B1Story extends React.Component{
     MouseEnd(){
         this.setState({paused:true});
     }
-    onClick(event){
-        this.props.Change(event.target.attributes[0].value,3);
-    }
     render(){
         return (
             <TweenOne
-            next="C1"
             animation={
             { 
                 backgroundColor: '#e8e8e8',
                 duration: 200,
                 onComplete:this.MouseEnd
             }}
-            className="B1Story"
+            className="C1Next"
             paused={this.state.paused}
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
             onMouseLeave={this.MouseLeave}
-            onClick={this.onClick}
-            >
-                <TweenOne
-                animation={
-                { 
-                    opacity:0,
-                    yoyo:1,
-                    duration:2000,
-                    ease:"easeInSine",
-                    repeat:-1
-                }}
-                className="B1StoryIcon"
-                >
-                <img src="B1Story.png" alt=""/>
-                </TweenOne>
-                <div className="B1StoryContent">阅览主线剧情</div>
-            </TweenOne>
+            />
         );
     }
 }

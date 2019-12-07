@@ -1,40 +1,45 @@
 import React from 'react';
 import './Test.css';
 import Animate from 'rc-animate';
-
+import QueueAnim from 'rc-queue-anim';
 export default class Test extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-          show:true
+          show:true,
+          switch:"ControlLeft",
+          content:"meow"
           };
           [
-            'start','stop'
+            'start','stop','cp'
         ].forEach((method) => this[method] = this[method].bind(this));
     }
     start(){
-      this.setState({show:!this.state.show});
+      this.setState({content:"meow",switch:"ControlLeft"});
     }
     stop(){
-
+      this.setState({content:"dog",switch:"ControlRight"});
+    }
+    cp(){
+      this.setState({content:"cp",switch:"ControlRight"});
     }
       render(){
         
         return (
           <div style={{margin:"100px"}}>
           <div onClick={this.start}>enter</div>
-          <Animate
-          transitionName="fade"
-          className="up"
-        >
-          {this.state.show?<div className="meow">meow</div>:null}
-        </Animate>
-        <Animate
-        className="down"
-          transitionName="fade"
-        >
-          {!this.state.show?<div className="meow">meow</div>:null}
-        </Animate>
+          <div onClick={this.stop}>enp</div>
+          <div onClick={this.cp}>p</div>
+          <QueueAnim
+            duration={5000}
+            appear={false}
+            ease="easeInSine"
+            className="Control"
+            >
+            {this.state.content==="meow"?<div key="meow" className="meow">meow</div>:null}
+          {this.state.content==="dog"?<div key="dog" className="meow">dog</div>:null}
+          {this.state.content==="cp"?<div key="cp" className="meow">cp</div>:null}
+            </QueueAnim>  
           </div>
         );
       }

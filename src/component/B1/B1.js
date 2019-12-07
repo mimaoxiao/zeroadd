@@ -20,11 +20,9 @@ export default class B1 extends React.Component{
     render(){
         return (
             <div className="B1Parent">
-                <div className="B1Back">
-                    <Return Change={this.props.Change} Next="A1" Level={1}/>
-                </div>
+                <Return className="B1Return" Change={this.props.Change} Next="A1" Level={1}/>
                 <B1Title className="B1Title"/>
-                <B1Story className="B1Story"/>
+                <B1Story next="C1" Change={this.props.Change} className="B1Story"/>
                 <B1Event className="B1Event"/>
                 <B1Person className="B1Person"/>
             </div>

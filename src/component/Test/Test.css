@@ -1,70 +1,121 @@
 .meow{
-  width: 20px;
+
   position:absolute;
-  height: 20px;
+
 }
 .up{
   
 }
 .down{
-  z-index: -1;
+  
 }
-.fade-enter {
-  opacity: 0;
+.ControlRight-enter {
+  transform: translateX(500px);
   animation-duration: .5s;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
   animation-play-state: paused;
 }
 
-.fade-appear {
-  opacity: 0;
+.ControlRight-appear {
+  transform: translateX(500px);
   animation-duration: .5s;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
   animation-play-state: paused;
 }
 
-.fade-leave {
+.ControlRight-leave {
   animation-duration: .5s;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
   animation-play-state: paused;
 }
 
-.fade-enter.fade-enter-active {
-  animation-name: fadeIn;
+.ControlRight-enter.ControlRight-enter-active {
+  animation-name: ControlRightIn;
   animation-play-state: running;
 }
 
-.fade-appear.fade-appear-active {
-  animation-name: fadeIn;
+.ControlRight-appear.ControlRight-appear-active {
+  animation-name: ControlRightIn;
   animation-play-state: running;
 }
 
-.fade-leave.fade-leave-active {
-  animation-name: fadeOut;
+.ControlRight-leave.ControlRight-leave-active {
+  animation-name: ControlRightOut;
   animation-play-state: running;
 }
 
-@keyframes fadeIn {
+@keyframes ControlRightIn {
   0% {
-    opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(500px);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
 }
 
-@keyframes fadeOut {
+@keyframes ControlRightOut {
   0% {
-    opacity: 1;
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
   100% {
-    opacity: 0;
-    transform: translateX(-100px)
+    transform: translateX(-500px);
+  }
+}
+.ControlLeft-enter {
+  transform: translateX(-500px);
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+
+.ControlLeft-appear {
+  transform: translateX(-500px);
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+
+.ControlLeft-leave {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+
+.ControlLeft-enter.ControlLeft-enter-active {
+  animation-name: ControlLeftIn;
+  animation-play-state: running;
+}
+
+.ControlLeft-appear.ControlLeft-appear-active {
+  animation-name: ControlLeftIn;
+  animation-play-state: running;
+}
+
+.ControlLeft-leave.ControlLeft-leave-active {
+  animation-name: ControlLeftOut;
+  animation-play-state: running;
+}
+
+@keyframes ControlLeftIn {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ControlLeftOut {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(500px);
   }
 }

@@ -1,13 +1,12 @@
-import "./B1Event.css";
+import "./C1Prev.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class B1Event extends React.Component{
+export default class C1Left extends React.Component{
     constructor(props){
         super(props);
         this.state=({
-            paused:true,
-            reverse:false,
+
         });
         [
             'MouseEnter','MouseLeave','MouseEnd'
@@ -31,27 +30,12 @@ export default class B1Event extends React.Component{
                 duration: 200,
                 onComplete:this.MouseEnd
             }}
-            className="B1Event"
+            className="C1Prev"
             paused={this.state.paused}
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
             onMouseLeave={this.MouseLeave}
-            onClick={this.onClick}
-            >
-                <TweenOne
-                animation={
-                { 
-                    rotate:720,
-                    duration:2000,
-                    ease:"easeInOutQuart",
-                    repeat:-1
-                }}
-                className="B1EventIcon"
-                >
-                <img src="B1Music.png" alt=""/>
-                </TweenOne>
-                <div className="B1EventContent">阅览支线剧情</div>
-            </TweenOne>
+            />
         );
     }
 }

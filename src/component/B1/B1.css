@@ -4,9 +4,11 @@
     grid-template-rows: 2fr 2fr repeat(4, 3fr); 
     grid-column-gap: 0px;
     grid-row-gap: 20px;
-    height: 100vmin;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
-.B1Back {
+.B1Return {
     grid-area: 1 / 1 / 2 / 2; 
     padding: 5px;
 }
