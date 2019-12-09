@@ -6,7 +6,8 @@ export default class C1Left extends React.Component{
     constructor(props){
         super(props);
         this.state=({
-
+            paused:true,
+            reverse:false,
         });
         [
             'MouseEnter','MouseLeave','MouseEnd'
@@ -35,6 +36,7 @@ export default class C1Left extends React.Component{
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
             onMouseLeave={this.MouseLeave}
+            onClick={this.props.click}
             />
         );
     }

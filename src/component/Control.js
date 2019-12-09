@@ -40,7 +40,7 @@ export default class Control extends React.Component{
     render(){
         return (
             <QueueAnim
-            duration={500}
+            duration={300}
             appear={false}
             ease="easeInSine"
             className="Control"

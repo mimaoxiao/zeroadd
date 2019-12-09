@@ -36,6 +36,7 @@ export default class C1Right extends React.Component{
             reverse={this.state.reverse}
             onMouseEnter={this.MouseEnter}
             onMouseLeave={this.MouseLeave}
+            onClick={this.props.click}
             />
         );
     }
