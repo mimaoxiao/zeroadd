@@ -23,12 +23,11 @@ export default class B1Story extends React.Component{
         this.setState({paused:true});
     }
     onClick(event){
-        this.props.Change(event.target.attributes[0].value,3);
+        this.props.Change("C1",3);
     }
     render(){
         return (
             <TweenOne
-            next="C1"
             animation={
             { 
                 backgroundColor: '#e8e8e8',

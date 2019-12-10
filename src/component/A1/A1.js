@@ -17,12 +17,12 @@ export default class A1 extends React.Component{
     }
 
     onClick(event){
-        this.props.Change(event.target.attributes[0].value,2);
+        this.props.Change("B1",2);
     }
 
     render(){
         return (
-            <div next="B1" onClick={this.onClick} className="A1Parent">
+            <div onClick={this.onClick} className="A1Parent">
                 <div className="A1Title"><Title/></div>
                 <TweenOne
                 animation={{ 

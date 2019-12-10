@@ -54,7 +54,7 @@ export default class C1 extends React.Component{
                 <Return className="C1Return" Change={this.props.Change} Next="B1" Level={2}/>
                 <C1Next className="C1Next" click={this.Next}/>
                 <C1Prev className="C1Prev" click={this.Prev}/>
-                <C1Main className="C1Main" act={this.state.act} pos={this.state.pos}/>
+                <C1Main className="C1Main" Change={this.props.Change} act={this.state.act} pos={this.state.pos}/>
             </div>
         );
     }

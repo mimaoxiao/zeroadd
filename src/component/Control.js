@@ -2,6 +2,7 @@ import "./Control.css";
 import A1 from './A1/A1';
 import B1 from './B1/B1';
 import C1 from './C1/C1';
+import Event1 from './Event/Event1/Event1';
  
 import QueueAnim from 'rc-queue-anim';
 import React from 'react';
@@ -49,6 +50,7 @@ export default class Control extends React.Component{
             {this.state.Display==="A1"?<A1 key="A1" Change={this.StatusChange}/>:null}
             {this.state.Display==="B1"?<B1 key="B1" Change={this.StatusChange}/>:null}
             {this.state.Display==="C1"?<C1 key="C1" Change={this.StatusChange}/>:null}
+            {this.state.Display==="E1"?<Event1 key="E1" Change={this.StatusChange}/>:null}
             </QueueAnim>    
         );
     }

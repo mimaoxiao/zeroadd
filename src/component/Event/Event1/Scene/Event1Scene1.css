@@ -1,0 +1,15 @@
+.E1S1Parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #75878a;
+    height: 100%;
+}
+
+.E1S1Word {
+    grid-area: 2 / 2 / 4 / 5;
+    font-size: 1.5em;
+    filter: blur(1.5px);
+} 
