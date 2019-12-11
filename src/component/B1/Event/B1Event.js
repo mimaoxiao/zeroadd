@@ -1,6 +1,7 @@
-import "./B1Event.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
+
+import "./B1Event.css";
 
 export default class B1Event extends React.Component{
     constructor(props){

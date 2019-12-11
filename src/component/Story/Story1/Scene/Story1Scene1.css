@@ -1,4 +1,4 @@
-.E1S1Parent {
+.S1S1I1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -8,8 +8,8 @@
     height: 100%;
 }
 
-.E1S1Word {
+.S1S1I2 {
     grid-area: 2 / 2 / 4 / 5;
     font-size: 1.5em;
     filter: blur(1.5px);
-} 
+}

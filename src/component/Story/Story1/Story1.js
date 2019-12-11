@@ -1,10 +1,10 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 
-import "./Event1.css";
-import Event1Scene1 from './Scene/Event1Scene1';
+import "./Story1.css";
+import Story1Scene1 from './Scene/Story1Scene1';
 
-export default class Event1 extends React.Component{
+export default class Story1 extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -28,7 +28,7 @@ export default class Event1 extends React.Component{
             className="E1"
             animConfig={[{opacity:[1,0]},{opacity:[1,0]}]}
             >
-            {this.state.pos===1?<Event1Scene1/>:null}
+            {this.state.pos===1?<Story1Scene1/>:null}
             </QueueAnim>
         );
     }

@@ -1,6 +1,7 @@
-import "./B1Person.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
+
+import "./B1Person.css";
 
 export default class B1Person extends React.Component{
     constructor(props){

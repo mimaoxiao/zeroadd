@@ -1,6 +1,7 @@
-import "./Return.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
+
+import "./Return.css";
 
 export default class Return extends React.Component{
     constructor(props){

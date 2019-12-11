@@ -1,5 +1,6 @@
-import "./C1MainCard1.css";
 import React from 'react';
+
+import "./C1MainCard1.css";
 
 export default class C1MainCard1 extends React.Component{
     constructor(props){

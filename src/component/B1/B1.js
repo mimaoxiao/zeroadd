@@ -1,5 +1,6 @@
-import "./B1.css";
 import React from 'react';
+
+import "./B1.css";
 import Return from './Return/Return';
 import B1Title from './Title/B1Title';
 import B1Story from './Story/B1Story';

@@ -1,6 +1,7 @@
-import "./A1RotatePhoto.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
+
+import "./A1RotatePhoto.css";
 
 export default class A1RotatePhoto extends React.Component{
     constructor(props){

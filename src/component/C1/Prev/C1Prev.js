@@ -1,6 +1,7 @@
-import "./C1Prev.css";
 import React from 'react';
 import TweenOne from 'rc-tween-one';
+
+import "./C1Prev.css";
 
 export default class C1Left extends React.Component{
     constructor(props){

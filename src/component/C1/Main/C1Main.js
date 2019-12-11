@@ -1,8 +1,9 @@
-import "./C1Main.css";
-import C1MainCard1 from './Card/C1MainCard1';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import React from 'react';
+
+import "./C1Main.css";
+import C1MainCard1 from './Card/C1MainCard1';
 
 export default class C1Main extends React.Component{
     constructor(props){

@@ -1,9 +1,10 @@
+import React from 'react';
+
 import "./C1.css";
 import C1Next from './Next/C1Next';
 import C1Prev from './Prev/C1Prev';
 import Return from './Return/Return';
 import C1Main from './Main/C1Main';
-import React from 'react';
 
 export default class C1 extends React.Component{
     constructor(props){

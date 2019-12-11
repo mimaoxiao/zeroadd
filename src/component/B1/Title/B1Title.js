@@ -1,5 +1,6 @@
-import "./B1Title.css";
 import React from 'react';
+
+import "./B1Title.css";
 
 export default class B1Title extends React.Component{
     constructor(props){

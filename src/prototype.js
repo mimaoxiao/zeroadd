@@ -1,5 +1,6 @@
-import "./.css";
 import React from 'react';
+
+import "./.css";
 
 export default class X extends React.Component{
     constructor(props){
