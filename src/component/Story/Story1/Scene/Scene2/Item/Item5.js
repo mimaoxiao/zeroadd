@@ -1,7 +1,7 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class Story1Scene1Item2 extends React.Component{
+export default class Story1Scene2Item5 extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -21,14 +21,14 @@ export default class Story1Scene1Item2 extends React.Component{
             },{
                 delay:500,
                 duration:500,
-                opacity:1
+                opacity:1,
+                onComplete:this.props.Next
             }]}
-            className="E1S1I2"
+            className="S1S2I5"
             style={{opacity:0}}
             paused={this.props.paused}
             >
-            2294年10月22日。
-            清晨，能见度低下。
+            {this.props.children}
             </TweenOne>
         );
     }

@@ -5,7 +5,10 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     background-color: #75878a;
+    
     height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .S1S1I2 {

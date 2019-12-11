@@ -9,10 +9,11 @@ export default class Story1Scene1 extends React.Component{
         super(props);
         this.state=({
             paused:[true,true],
-            pos:0
+            pos:0,
+            max:1
         });
         [
-            'Next'
+            'Next','End'
         ].forEach((method) => this[method] = this[method].bind(this));
     }
 
@@ -25,6 +26,14 @@ export default class Story1Scene1 extends React.Component{
         })
     }
 
+    End(){
+
+        if(this.state.pos===this.state.max){
+            this.props.Next();
+            return;
+        }
+    }
+
     componentDidMount(){
         let paused=this.state.paused;
         paused[this.state.pos]=false;
@@ -35,11 +44,9 @@ export default class Story1Scene1 extends React.Component{
 
     render(){
         return (
-            <>
-            <Story1Scene1Item1 paused={this.state.paused[0]} Next={this.Next}>
+            <Story1Scene1Item1 End={this.End} paused={this.state.paused[0]} Next={this.Next}>
                 <Story1Scene1Item2 paused={this.state.paused[1]} Next={this.Next}/>
             </Story1Scene1Item1>
-            </>
         );
     }
 }

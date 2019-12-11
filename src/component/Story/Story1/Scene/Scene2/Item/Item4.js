@@ -1,7 +1,7 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 
-export default class Story1Scene1Item1 extends React.Component{
+export default class Story1Scene2Item4 extends React.Component{
     constructor(props){
         super(props);
         this.state=({
@@ -24,11 +24,12 @@ export default class Story1Scene1Item1 extends React.Component{
                 opacity:1,
                 onComplete:this.props.Next
             }]}
-            className="E1S1I1"
+            className="S1S2I4"
             style={{opacity:0}}
             paused={this.props.paused}
             >
-            {this.props.children}
+            在这灰白极简的性冷淡风格装修的房间里，还是这安妮最了解自己。<br/>
+            戴安娜一想到这，就把自己睡床上另外一个主人抱了起来。
             </TweenOne>
         );
     }

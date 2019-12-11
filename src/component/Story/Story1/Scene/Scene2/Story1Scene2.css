@@ -1,0 +1,34 @@
+.S1S2I1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) 3fr; 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #d1d9e0;
+}
+.S1S2I2{
+    grid-area: 2 / 1 / 5 / 2;
+    background-image: url("./Item/S1S2I2.png");
+    background-size: 100% 100%;
+}
+.S1S2I3{
+    font-size: 1.5em;
+    grid-area: 4 / 2 / 5 / 3;
+}
+.S1S2I4{
+    font-size: 1em;
+    grid-area: 2 / 2 / 4 / 3;
+}
+.S1S2I5{
+    grid-area: 4 / 3 / 5 / 4;
+    background-image: url("./Item/S1S2I5.png");
+    background-size: 100% 100%;
+}
+.S1S2I6{
+    font-size: 1.5em;
+    grid-area: 3 / 3 / 4 / 4;
+}
