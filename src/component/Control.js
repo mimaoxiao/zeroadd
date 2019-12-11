@@ -50,7 +50,7 @@ export default class Control extends React.Component{
             {this.state.Display==="A1"?<A1 key="A1" Change={this.StatusChange}/>:null}
             {this.state.Display==="B1"?<B1 key="B1" Change={this.StatusChange}/>:null}
             {this.state.Display==="C1"?<C1 key="C1" Change={this.StatusChange}/>:null}
-            {this.state.Display==="E1"?<Story1 key="E1" Change={this.StatusChange}/>:null}
+            {this.state.Display==="S1"?<Story1 key="S1" Change={this.StatusChange}/>:null}
             </QueueAnim>    
         );
     }

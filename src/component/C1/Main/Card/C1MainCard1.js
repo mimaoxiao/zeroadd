@@ -14,7 +14,7 @@ export default class C1MainCard1 extends React.Component{
     }
 
     onClick(){
-        this.props.Change("E1",4);
+        this.props.Change("S1",4);
     }
 
     render(){
