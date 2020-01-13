@@ -3,25 +3,41 @@
     width: 100%;
     position: absolute;
     background-image: linear-gradient(to right,#d1d9e0 , black);
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
 }
 .S1S3I2{
-
+    background-image: url("./Item/S1S3I2.png");
+    background-size: 100% 100%;
+    grid-area: 1 / 1 / 4 / 2;
 }
 .S1S3I3{
-
+    font-size: 1.5em;
+    grid-area: 2 / 2 / 3 / 4;
 }
 .S1S3I4{
-
+    font-size: 1.5em;
+    grid-area: 3 / 2 / 4 / 4;
 }
 .S1S3I5{
-
+    grid-area: 2 / 5 / 3 / 6;
 }
 .S1S3I6{
-
+    font-size: 1.5em;
+    padding: 0.2em;
+    grid-area: 4 / 1 / 5 / 3;
 }
 .S1S3I7{
-
+    font-size: 1.5em;
+    padding: 0.2em;
+    grid-area: 5 / 1 / 6 / 3;
 }
 .S1S3I8{
-
+    background-image: url("./Item/S1S3I8.png");
+    background-size: 100% 100%;
+    grid-area: 5 / 3 / 6 / 5;
 }

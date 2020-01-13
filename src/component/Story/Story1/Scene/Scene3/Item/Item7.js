@@ -20,6 +20,7 @@ export default class Story1Scene3Item7 extends React.Component{
                 opacity:0
             },{
                 duration:500,
+                delay:500,
                 opacity:1,
                 onComplete:this.props.Next
             }]}
@@ -28,7 +29,7 @@ export default class Story1Scene3Item7 extends React.Component{
             style={{opacity:0}}
             paused={this.props.paused}
             >
-            {this.props.children}
+            简单点来说就是修飞船。
             </TweenOne>
         );
     }

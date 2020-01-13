@@ -20,6 +20,7 @@ export default class Story1Scene3Item6 extends React.Component{
                 opacity:0
             },{
                 duration:500,
+                delay:500,
                 opacity:1,
                 onComplete:this.props.Next
             }]}
@@ -28,7 +29,7 @@ export default class Story1Scene3Item6 extends React.Component{
             style={{opacity:0}}
             paused={this.props.paused}
             >
-            {this.props.children}
+            但是幸好也在那个机械事故中自己找到了人生第一份可以让自己开心的工作——机械维修人员。
             </TweenOne>
         );
     }

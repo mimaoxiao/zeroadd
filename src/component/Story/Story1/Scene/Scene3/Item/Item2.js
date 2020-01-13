@@ -20,6 +20,7 @@ export default class Story1Scene3Item2 extends React.Component{
                 opacity:0
             },{
                 duration:500,
+                delay:500,
                 opacity:1,
                 onComplete:this.props.Next
             }]}

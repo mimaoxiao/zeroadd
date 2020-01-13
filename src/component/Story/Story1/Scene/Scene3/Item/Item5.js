@@ -20,6 +20,7 @@ export default class Story1Scene3Item5 extends React.Component{
                 opacity:0
             },{
                 duration:500,
+                delay:500,
                 opacity:1,
                 onComplete:this.props.Next
             }]}
@@ -28,7 +29,7 @@ export default class Story1Scene3Item5 extends React.Component{
             style={{opacity:0}}
             paused={this.props.paused}
             >
-            {this.props.children}
+            噢，遇上那倒霉的事情
             </TweenOne>
         );
     }
