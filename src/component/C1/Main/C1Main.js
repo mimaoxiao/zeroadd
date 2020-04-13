@@ -4,6 +4,7 @@ import React from 'react';
 
 import "./C1Main.css";
 import C1MainCard1 from './Card/C1MainCard1';
+import C1MainCard2 from './Card/C1MainCard2';
 
 export default class C1Main extends React.Component{
     constructor(props){
@@ -29,11 +30,11 @@ export default class C1Main extends React.Component{
         let Aniconfig;
         if(this.props.act==="prev")
         {
-            Aniconfig=[{x:[0,200],opacity:[1,0]},{opacity:[1,0]}];
+            Aniconfig=[{x:[0,-200],opacity:[1,0]},{opacity:[1,0]}];
         }
         else if(this.props.act==="next")
         {
-            Aniconfig=[{x:[0,-200],opacity:[1,0]},{opacity:[1,0]}];
+            Aniconfig=[{x:[0,200],opacity:[1,0]},{opacity:[1,0]}];
         }
         return (
             <TweenOne
@@ -56,7 +57,7 @@ export default class C1Main extends React.Component{
                 animConfig={Aniconfig}
                 >
                 {this.props.pos===1?<C1MainCard1 Change={this.props.Change} key={1}/>:null}
-                {this.props.pos===2?<C1MainCard1 key={2}/>:null}
+                {this.props.pos===2?<C1MainCard2 Change={this.props.Change} key={2}/>:null}
                 {this.props.pos===3?<C1MainCard1 key={3}/>:null}
                 {this.props.pos===4?<C1MainCard1 key={4}/>:null}
                 {this.props.pos===5?<C1MainCard1 key={5}/>:null}

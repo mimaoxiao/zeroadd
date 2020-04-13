@@ -1,0 +1,59 @@
+.C1MainCard2Parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
+    border-radius: 10px;
+    background-color: #545454;
+    height: 70%;
+    width: 25%;
+    position: absolute;
+}
+.C1MainDay{
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.C1MainTime{
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.C1MainContent {
+    grid-area: 2 / 1 / 3 / 3;
+
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.C1MainYear {
+    font-size: 1em;
+    width: 100%;
+}
+
+.C1MainDate {
+    font-size: 2em;
+    width: 100%;
+}
+
+.C1MainClock {
+    font-size: 3em;
+    width: 100%;
+}

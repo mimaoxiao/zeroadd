@@ -1,0 +1,24 @@
+.Text1Parent {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 10fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+    
+.Text1Return {
+    grid-area: 1 / 1 / 2 / 2; 
+}
+.Text{
+    grid-area: 1 / 2 / 3 / 3; 
+    border: 5px black solid;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
